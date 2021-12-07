@@ -25,22 +25,8 @@
   <img src="img/chess.png" alt="chess" width=50% class="center" style="display:block;">
   
   <div>
-    <h3>Home</h3>
+    <h3>Delete Entries</h3>
   </div>
-
-  <?php 
-    for ($x = 1; $x <= 3; $x++) {
-      $filename = "./blogs/testblog$x.txt";
-      $myfile = fopen($filename, "r");
-      if (!$myfile) {
-        die("Unable to open $filename.");
-      }
-      $contents = fread($myfile, filesize($filename));
-      echo "<p>$contents</p>";
-      fclose($myfile);
-      echo "<br>";
-    }
-  ?>
 
   <footer>
     Site created by Taylor Brooks Boise State University Fall2021 CS401 
