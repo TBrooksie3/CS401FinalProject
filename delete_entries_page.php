@@ -28,31 +28,45 @@
   </div>
 
   <?php 
-    $j = 1;
-    while (file_exists("./blogs/blog$j.txt")) {
+    $directory = "./blogs";
+    $directoryFiles = opendir($directory);
+    $blogCount = 0;
+    $blogNumbers = array();
+    $j = 0;
+    while (($file = readdir($directoryFiles)) != false) {
+      $extension_from = strrpos($file,".");
+      $sub = substr($file, strpos($file,'g')+strlen('g'),strlen($file));
+      $number = substr($sub,0,strpos($sub,'.'));
+      if (substr($file,$extension_from+1) == 'txt') {
+        $blogCount++;
+        $blogNumbers[$j] = $number;
         $j++;
+      }
     }
-    for ($i = 1; $i < $j; $i++) {
-      $filename = "./blogs/blog$i.txt";
-      $myfile = fopen($filename, "r");
-      if (!$myfile) {
+    for ($i = 0; $i < $blogCount; $i++) {
+      $temp = $blogNumbers[$i];
+      if (file_exists("./blogs/blog$temp.txt")) {
+      $filename = "./blogs/blog$temp.txt";
+      $file = fopen($filename, "r");
+      if (!$file) {
         die("Unable to open $filename.");
       }
       $count = 1;
-      while(!feof($myfile)) {
-        $line = fgets($myfile);
+      while(!feof($file)) {
+        $line = fgets($file);
         if ($count == 1) {
           echo "
             <h4>$line</h4>
             <form action='delete_blog.php' id='deleteBlog' name='deleteBlog' method='post'>
-            <input type='hidden' id='filename' name='filename' value='$filename'>
-            <input style='margin-left: 25%;' type='submit' value='Delete Blog'>";
+            <input style='margin-left: 25%;'type='radio' name='filename[]' value=$filename>
+            <input type='submit' value='Delete Blog'>";
         } else {
           echo "<p style='margin-left: 30%';>$line</p>";
         }
         $count++;
     }
-      fclose($myfile);
+      fclose($file);
+  }
     }
   ?>
 

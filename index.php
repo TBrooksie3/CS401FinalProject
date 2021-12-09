@@ -8,7 +8,7 @@
 
 
 <body>  
-  <?php echo "<h1>World Chess Championship Blog</h1>" ?> 
+  <?php echo "<h1>2021 World Chess Championship Blog</h1>" ?> 
   <header>
     <nav>
       <table class="center">
@@ -29,27 +29,41 @@
   </div>
 
   <?php 
-    $j = 1;
-    while (file_exists("./blogs/blog$j.txt")) {
+    $directory = "./blogs";
+    $directoryFiles = opendir($directory);
+    $blogCount = 0;
+    $blogNumbers = array();
+    $j = 0;
+    while (($file = readdir($directoryFiles)) != false) {
+      $extension_from = strrpos($file,".");
+      $sub = substr($file, strpos($file,'g')+strlen('g'),strlen($file));
+      $number = substr($sub,0,strpos($sub,'.'));
+      if (substr($file,$extension_from+1) == 'txt') {
+        $blogCount++;
+        $blogNumbers[$j] = $number;
         $j++;
-    }
-    for ($i = 1; $i < $j; $i++) {
-      $filename = "./blogs/blog$i.txt";
-      $myfile = fopen($filename, "r");
-      if (!$myfile) {
-        die("Unable to open $filename.");
       }
-      $count = 1;
-      while(!feof($myfile)) {
-        $line = fgets($myfile);
-        if ($count == 1) {
-          echo "<h4>$line</h4>";
-        } else {
-          echo "<p style='margin-left: 30%';>$line</p>";
-        }
-        $count++;
     }
-      fclose($myfile);
+    for ($i = 0; $i < $blogCount; $i++) {
+      $temp = $blogNumbers[$i];
+      if (file_exists("./blogs/blog$temp.txt")) {
+        $filename = "./blogs/blog$temp.txt";
+        $file = fopen($filename, "r");
+        if (!$file) {
+          die("Unable to open $filename.");
+        }
+        $count = 1;
+        while(!feof($file)) {
+          $line = fgets($file);
+          if ($count == 1) {
+            echo "<h4>$line</h4>";
+          } else {
+            echo "<p style='margin-left: 30%';>$line</p>";
+          }
+          $count++;
+      }
+        fclose($file);
+      }
     }
   ?>
 
