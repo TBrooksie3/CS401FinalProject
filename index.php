@@ -29,16 +29,27 @@
   </div>
 
   <?php 
-    for ($x = 1; $x <= 3; $x++) {
-      $filename = "./blogs/testblog$x.txt";
+    $j = 1;
+    while (file_exists("./blogs/blog$j.txt")) {
+        $j++;
+    }
+    for ($i = 1; $i < $j; $i++) {
+      $filename = "./blogs/blog$i.txt";
       $myfile = fopen($filename, "r");
       if (!$myfile) {
         die("Unable to open $filename.");
       }
-      $contents = fread($myfile, filesize($filename));
-      echo "<p>$contents</p>";
+      $count = 1;
+      while(!feof($myfile)) {
+        $line = fgets($myfile);
+        if ($count == 1) {
+          echo "<h4>$line</h4>";
+        } else {
+          echo "<p style='margin-left: 30%';>$line</p>";
+        }
+        $count++;
+    }
       fclose($myfile);
-      echo "<br>";
     }
   ?>
 

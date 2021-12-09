@@ -26,7 +26,15 @@
   
   <div>
     <h3>Add Entries</h3>
+    <p>Tell us your thoughts on the 2021 World Chess Championship!</p>
   </div>
+
+  <div>
+    <form action="submit_blog.php" method="post" id="blogForm" name="blogForm" method="post">
+    <textarea id="blog" name="blog" rows="4" cols="50" form="blogForm"></textarea>
+    <br>
+    <input type="submit" value="Submit Blog">
+  </div><br>
 
   <footer>
     Site created by Taylor Brooks Boise State University Fall2021 CS401 

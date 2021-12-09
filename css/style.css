@@ -11,9 +11,12 @@ h1 {
 h3 {
     color:chocolate;
 }
+h4 {
+    color:goldenrod;
+    margin-left: 25%;
+}
 
 p {
-    text-align: center;
     color: rgb(110, 62, 16);
 }
 
