@@ -30,7 +30,7 @@
   </div>
 
   <div>
-    <form action="submit_blog.php" method="post" id="blogForm" name="blogForm" method="post">
+    <form action="submit_blog.php" id="blogForm" name="blogForm" method="post">
     <textarea id="blog" name="blog" rows="4" cols="50" form="blogForm"></textarea>
     <br>
     <input type="submit" value="Submit Blog">
