@@ -24,7 +24,7 @@
   <img src="img/chess.png" alt="chess" width=50% class="center" style="display:block;">
   
   <div>
-    <h3>Delete Entries</h3>
+    <h3>Modify Entries</h3>
   </div>
 
   <?php 
