@@ -30,7 +30,7 @@ The features of this app include a Home page that displays all current blogs, a 
 
 ## Sources
     The following sources were referenced for fixing issues and getting the image.
-        PHP functionality: https://learn.zybooks.com/zybook/BOISESTATECS401PanterFall2021 
+        PHP reading and writing files: https://learn.zybooks.com/zybook/BOISESTATECS401PanterFall2021 
 
         Getting directory counts: https://stackoverflow.com/questions/18593668/how-to-count-number-of-files-in-folder-in-php
 
