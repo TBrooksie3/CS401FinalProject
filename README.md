@@ -36,6 +36,6 @@ The features of this app include a Home page that displays all current blogs, a 
 
         Fixing POST returning last value from HTML form everytime: https://stackoverflow.com/questions/24368869/php-post-always-returns-the-last-value
 
-        Getting substring: https://stackoverflow.com/questions/14891743/extract-a-substring-between-two-characters-in-a-string-php
+        Getting substring between two characters: https://stackoverflow.com/questions/14891743/extract-a-substring-between-two-characters-in-a-string-php
 
         Image: https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.chess.com%2Farticle%2Fview%2Fworld-chess-championship-2021&psig=AOvVaw2jVzXUQgRWd2YeUGQUN_D1&ust=1639180061968000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCIiJwY_01_QCFQAAAAAdAAAAABAD
