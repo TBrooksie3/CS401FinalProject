@@ -5,10 +5,10 @@
     $blogNumbers = array();
     $j = 0;
     while (($file = readdir($directoryFiles)) != false) {
-      $extension_from = strrpos($file,".");
+      $ext = strrpos($file,".");
       $sub = substr($file, strpos($file,'g')+strlen('g'),strlen($file));
       $number = substr($sub,0,strpos($sub,'.'));
-      if (substr($file,$extension_from+1) == 'txt') {
+      if (substr($file,$ext+1) == 'txt') {
         $blogCount++;
         $blogNumbers[$j] = $number;
         $j++;
