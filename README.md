@@ -5,6 +5,15 @@ email: taylorbrooks402@u.boisestate.edu
 
 ## How to run this website
 
+Before running ensure PHP is installed on your respective device. A script is given that can be run on most machines. Run the command:
+
+$ ./setup.sh
+
+If on a Mac ensure that homebrew is installed and then PHP with the following commands:
+
+$ /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+$ brew install php
+
 To run this site locally you must download all of the files and from the main directory of the files run the command:
 
 $ php -S localhost:3000
