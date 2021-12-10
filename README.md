@@ -34,7 +34,7 @@ The features of this app include a Home page that displays all current blogs, a 
 
         Getting directory counts: https://stackoverflow.com/questions/18593668/how-to-count-number-of-files-in-folder-in-php
 
-        Fixing POST returning last value everytime: https://stackoverflow.com/questions/24368869/php-post-always-returns-the-last-value
+        Fixing POST returning last value from HTML form everytime: https://stackoverflow.com/questions/24368869/php-post-always-returns-the-last-value
 
         Getting substring: https://stackoverflow.com/questions/14891743/extract-a-substring-between-two-characters-in-a-string-php
 
