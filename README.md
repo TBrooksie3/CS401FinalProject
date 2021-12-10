@@ -21,7 +21,9 @@ The features of this app include a Home page that displays all current blogs, a 
 
 ## Sources
     The following sources were referenced for fixing issues and getting the image.
-        Getting Directory Counts: https://stackoverflow.com/questions/18593668/how-to-count-number-of-files-in-folder-in-php
+        PHP functionality: https://learn.zybooks.com/zybook/BOISESTATECS401PanterFall2021 
+
+        Getting directory counts: https://stackoverflow.com/questions/18593668/how-to-count-number-of-files-in-folder-in-php
 
         Fixing POST returning last value everytime: https://stackoverflow.com/questions/24368869/php-post-always-returns-the-last-value
 

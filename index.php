@@ -44,6 +44,9 @@
         $j++;
       }
     }
+    if ($blogCount == 0) {
+      echo "<h5>There are no blogs currently. Navigate to the 'Add Entries' page to create new blogs!</h5>";
+    }
     for ($i = 0; $i < $blogCount; $i++) {
       $temp = $blogNumbers[$i];
       if (file_exists("./blogs/blog$temp.txt")) {

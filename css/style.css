@@ -16,6 +16,11 @@ h4 {
     margin-left: 25%;
 }
 
+h5 {
+    color:goldenrod;
+    text-align: center;
+}
+
 p {
     color: rgb(110, 62, 16);
 }
